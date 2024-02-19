@@ -41,38 +41,15 @@ void vendor_load_properties()
 {
     std::string bootloader = GetProperty("ro.bootloader", "");
 
-    if (bootloader.find("G920F") == 0) {
+    if (bootloader.find("N920C") == 0) {
         /* zerofltexx */
         property_override("ro.build.description", "zerofltexx-user 7.0 NRD90M G920FXXU6EVG1 release-keys");
-        set_ro_product_prop("device", "zerofltexx");
+        set_ro_product_prop("device", "noblelte");
         set_ro_build_prop("fingerprint", "samsung/zerofltexx/zeroflte:7.0/NRD90M/G920FXXU6EVG1:user/release-keys");
-        set_ro_product_prop("model", "SM-G920F");
-        set_ro_product_prop("name", "zerofltexx");
+        set_ro_product_prop("model", "SM-N920C");
+        set_ro_product_prop("name", "noblelte");
         gsm_properties("9");
-    } else if (bootloader.find("G920W8") == 0) {
-        /* zerofltebmc */
-        property_override("ro.build.description", "zerofltecan-user 7.0 NRD90M G920W8VLU6DVG1 release-keys");
-        set_ro_product_prop("device", "zerofltecan");
-        set_ro_build_prop("fingerprint", "samsung/zerofltecan/zerofltecan:7.0/NRD90M/G920W8VLU6DVG1:user/release-keys");
-        set_ro_product_prop("model", "SM-G920W8");
-        set_ro_product_prop("name", "zerofltecan");
-        gsm_properties("9");
-    } else if (bootloader.find("G920S") == 0) {
-        /* zeroflteskt */
-        property_override("ro.build.description", "zeroflteskt-user 7.0 NRD90M G920SKSU3EVG1 release-keys");
-        set_ro_product_prop("device", "zeroflteskt");
-        set_ro_build_prop("fingerprint", "samsung/zeroflteskt/zeroflte:7.0/NRD90M/G920SKSU3EVG1:user/release-keys");
-        set_ro_product_prop("model", "SM-G920S");
-        set_ro_product_prop("name", "zeroflteskt");
-        gsm_properties("9");
-    }  else if (bootloader.find("G920L") == 0) {
-        /* zerofltelgt */
-        property_override("ro.build.description", "zerofltelgt-user 7.0 NRD90M G920LKLU3EVG1 release-keys");
-        set_ro_product_prop("device", "zerofltelgt");
-        set_ro_build_prop("fingerprint", "samsung/zerofltelgt/zerofltelgt:7.0/NRD90M/G920LKLU3EVG1:user/release-keys");
-        set_ro_product_prop("model", "SM-G920L");
-        set_ro_product_prop("name", "zerofltelgt");
-        gsm_properties("9");
+    }
     } else {
         gsm_properties("9");
     }

@@ -14,20 +14,11 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/zerofltexx
-
-# Permissions
-PRODUCT_COPY_FILES += \
-	frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
+LOCAL_PATH := device/samsung/noblelte
 
 # Audio
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_0.xml
-
-# IR
-PRODUCT_PACKAGES += \
-	android.hardware.ir@1.0-impl \
-	android.hardware.ir@1.0-service
 
 PRODUCT_COPY_FILES += \
 	device/samsung/universal7420-common/configs/init/rild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/rild.legacy.rc
@@ -43,4 +34,4 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, device/samsung/universal7420-common/device-common.mk)
 
 # Call the proprietary
-$(call inherit-product, vendor/samsung/zerofltexx/zerofltexx-vendor.mk)
+$(call inherit-product, vendor/samsung/noblelte/noblelte-vendor.mk)
