@@ -43,13 +43,12 @@ void vendor_load_properties()
 
     if (bootloader.find("N920C") == 0) {
         /* zerofltexx */
-        property_override("ro.build.description", "zerofltexx-user 7.0 NRD90M G920FXXU6EVG1 release-keys");
+        property_override("ro.build.description", "nobleltejv-user 7.0 NRD90M N920CXXS5CRH3 release-keys");
         set_ro_product_prop("device", "noblelte");
-        set_ro_build_prop("fingerprint", "samsung/zerofltexx/zeroflte:7.0/NRD90M/G920FXXU6EVG1:user/release-keys");
+        set_ro_build_prop("fingerprint", "samsung/nobleltejv/noblelte:7.0/NRD90M/N920CXXS5CRH3:user/release-keys");
         set_ro_product_prop("model", "SM-N920C");
         set_ro_product_prop("name", "noblelte");
         gsm_properties("9");
-    }
     } else {
         gsm_properties("9");
     }
