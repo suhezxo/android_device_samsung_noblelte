@@ -26,6 +26,10 @@ PRODUCT_COPY_FILES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# Thermal config
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/configs/thermal/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
+
 # Wi-Fi
 PRODUCT_PACKAGES += \
 	WifiOverlay
