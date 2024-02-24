@@ -33,5 +33,8 @@ PRODUCT_PACKAGES += \
 # Inherit from universal7420-common
 $(call inherit-product, device/samsung/universal7420-common/device-common.mk)
 
+# Setup dalvik vm configs
+$(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
+
 # Call the proprietary
 $(call inherit-product, vendor/samsung/noblelte/noblelte-vendor.mk)
