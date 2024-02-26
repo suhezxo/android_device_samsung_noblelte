@@ -20,6 +20,10 @@ LOCAL_PATH := device/samsung/noblelte
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_0.xml
 
+# Bluetooth
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
+
 PRODUCT_COPY_FILES += \
 	device/samsung/universal7420-common/configs/init/rild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/rild.legacy.rc
 
