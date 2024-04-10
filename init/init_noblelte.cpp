@@ -29,6 +29,10 @@
  */
 
 #include <android-base/logging.h>
+
+#include <android-base/file.h>
+#include <android-base/logging.h>
+#include <android-base/strings.h>
 #include <android-base/properties.h>
 
 #include "property_service.h"
@@ -36,22 +40,34 @@
 #include "init_universal7420.h"
 
 using android::base::GetProperty;
+using android::base::ReadFileToString;
+using android::base::Trim;
+
+void set_sim_info()
+{
+	const char *simslot_count_path = "/proc/simslot_count";
+	std::string simslot_count;
+
+	if (ReadFileToString(simslot_count_path, &simslot_count)) {
+		simslot_count = Trim(simslot_count); // strip newline
+		property_override("ro.vendor.multisim.simslotcount", simslot_count.c_str());
+	}
+	else {
+		LOG(ERROR) << "Could not open '" << simslot_count_path << "'\n";
+	}
+}
 
 void vendor_load_properties()
 {
     std::string bootloader = GetProperty("ro.bootloader", "");
 
-    if (bootloader.find("N920C") == 0) {
-        /* zerofltexx */
-        property_override("ro.build.description", "nobleltejv-user 7.0 NRD90M N920CXXS5CRH3 release-keys");
-        set_ro_product_prop("device", "noblelte");
-        set_ro_build_prop("fingerprint", "samsung/nobleltejv/noblelte:7.0/NRD90M/N920CXXS5CRH3:user/release-keys");
-        set_ro_product_prop("model", "SM-N920C");
-        set_ro_product_prop("name", "noblelte");
-        gsm_properties("9");
-    } else {
-        gsm_properties("9");
-    }
+    property_override("ro.build.description", "nobleltejv-user 7.0 NRD90M N920CXXS5CRH3 release-keys");
+    set_ro_product_prop("device", "noblelte");
+    set_ro_build_prop("fingerprint", "samsung/nobleltejv/noblelte:7.0/NRD90M/N920CXXS5CRH3:user/release-keys");
+    set_ro_product_prop("model", "SM-N920C");
+    set_ro_product_prop("name", "noblelte");
+    gsm_properties("9");
+    set_sim_info();
 
     std::string device = GetProperty("ro.product.device", "");
     LOG(ERROR) << "Found bootloader id " << bootloader <<  " setting build properties for "
