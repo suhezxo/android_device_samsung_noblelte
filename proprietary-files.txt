@@ -12,6 +12,7 @@ vendor/firmware/fimc_is_fw2_2p2.bin
 vendor/firmware/fimc_is_fw2_imx240.bin
 vendor/firmware/ois_fw_dom.bin
 vendor/firmware/ois_fw_sec.bin
+vendor/firmware/ois_fw_sec_2.bin
 vendor/firmware/setfile_2p2.bin
 vendor/firmware/setfile_4e6.bin
 vendor/firmware/setfile_6b2.bin
@@ -65,10 +66,6 @@ vendor/lib/libMcClient.so
 vendor/lib64/libMcClient.so
 vendor/lib/libMcRegistry.so
 vendor/lib64/libMcRegistry.so
-
-# IR
-lib/hw/consumerir.exynos5.so:vendor/lib/hw/consumerir.exynos5.so
-lib64/hw/consumerir.exynos5.so:vendor/lib64/hw/consumerir.exynos5.so
 
 # NXP Noise Cancelling
 vendor/etc/nxp/AzControlParams_SPEAKER.txt
@@ -226,30 +223,49 @@ vendor/lib/libLifevibes_lvverx.so:vendor/lib/soundfx/libLifevibes_lvverx.so
 vendor/lib/libLifevibes_lvvetx.so:vendor/lib/soundfx/libLifevibes_lvvetx.so
 
 # Wi-Fi
+vendor/etc/wifi/.clminfo
 vendor/etc/wifi/bcmdhd_apsta.bin
 vendor/etc/wifi/bcmdhd_apsta.bin_a1
+vendor/etc/wifi/bcmdhd_apsta.bin_b1
+vendor/etc/wifi/bcmdhd_apsta.bin_blob
 vendor/etc/wifi/bcmdhd_ibss.bin
 vendor/etc/wifi/bcmdhd_ibss.bin_a1
+vendor/etc/wifi/bcmdhd_ibss.bin_b1
 vendor/etc/wifi/bcmdhd_mfg.bin
 vendor/etc/wifi/bcmdhd_mfg.bin_a1
+vendor/etc/wifi/bcmdhd_mfg.bin_b1
+vendor/etc/wifi/bcmdhd_mfg.bin_blob
+vendor/etc/wifi/bcmdhd_mfg2.bin_b1
 vendor/etc/wifi/bcmdhd_sta.bin
 vendor/etc/wifi/bcmdhd_sta.bin_a1
+vendor/etc/wifi/bcmdhd_sta.bin_b1
+vendor/etc/wifi/bcmdhd_sta.bin_blob
 vendor/etc/wifi/cred.conf
+vendor/etc/wifi/indoorchannel.info
+vendor/etc/wifi/nvram.txt
 vendor/etc/wifi/nvram_mfg.txt
 vendor/etc/wifi/nvram_mfg.txt_a1
+vendor/etc/wifi/nvram_mfg.txt_b0
+vendor/etc/wifi/nvram_mfg.txt_b1
 vendor/etc/wifi/nvram_mfg.txt_b85_a1
 vendor/etc/wifi/nvram_mfg.txt_murata
 vendor/etc/wifi/nvram_mfg.txt_murata_a1
+vendor/etc/wifi/nvram_mfg.txt_murata_b1
 vendor/etc/wifi/nvram_mfg.txt_murata_b85_a1
 vendor/etc/wifi/nvram_mfg.txt_wisol
 vendor/etc/wifi/nvram_mfg.txt_wisol_a1
+vendor/etc/wifi/nvram_mfg.txt_wisol_b1
 vendor/etc/wifi/nvram_mfg.txt_wisol_b85_a1
 vendor/etc/wifi/nvram_net.txt
 vendor/etc/wifi/nvram_net.txt_a1
+vendor/etc/wifi/nvram_net.txt_b0
+vendor/etc/wifi/nvram_net.txt_b1
 vendor/etc/wifi/nvram_net.txt_b85_a1
 vendor/etc/wifi/nvram_net.txt_murata
 vendor/etc/wifi/nvram_net.txt_murata_a1
+vendor/etc/wifi/nvram_net.txt_murata_b1
 vendor/etc/wifi/nvram_net.txt_murata_b85_a1
 vendor/etc/wifi/nvram_net.txt_wisol
 vendor/etc/wifi/nvram_net.txt_wisol_a1
+vendor/etc/wifi/nvram_net.txt_wisol_b1
 vendor/etc/wifi/nvram_net.txt_wisol_b85_a1

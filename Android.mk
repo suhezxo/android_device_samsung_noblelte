@@ -14,9 +14,9 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/zerofltexx
+LOCAL_PATH := device/samsung/noblelte
 
-ifneq ($(filter zeroflte zerofltexx zeroflteskt,$(TARGET_DEVICE)),)
+ifneq ($(filter noblelte nobleltedd nobleltedv nobleltejv nobleltektt nobleltelgt noblelteskt,$(TARGET_DEVICE)),)
 
   subdir_makefiles=$(call first-makefiles-under,$(LOCAL_PATH))
   $(foreach mk,$(subdir_makefiles),$(info including $(mk) ...)$(eval include $(mk)))
