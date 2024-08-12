@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/cfa57aa0-4390-44f1-92d7-f947056ff054)Device configuration for Samsung Galaxy Note5 (SM-N920C).
+Device configuration for Samsung Galaxy Note5 (SM-N920C).
 ========================================
 
 Basic   | Specification List
