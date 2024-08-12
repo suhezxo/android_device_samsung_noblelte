@@ -17,4 +17,4 @@ Rear Camera  | 16 MP, f/1.9, 28mm (wide), 1/2.6", 1.12µm, AF, OIS
 Front Camera | 5 MP, f/1.9, 22mm (wide), 1/4.1", 1.34µm
 Release Date | August 2015
 
-![Galaxy Note5](https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s6-3.jpg) "Galaxy Note5")
+![Galaxy Note5](https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-note5-5.jpg)
