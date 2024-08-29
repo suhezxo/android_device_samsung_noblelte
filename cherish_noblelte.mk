@@ -25,14 +25,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l.mk)
 
-# Inherit some common Cherish stuff.
-BUILD_WITH_GAPPS := true
-$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
+# CherishOS stuff.
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_ENABLE_BLUR := true
 
-CHERISH_BUILD_TYPE := Unofficial
+# CherishOS Build.
+CHERISH_BUILD_TYPE=OFFICIAL
 WITH_GMS := true
-# Cherish props
-CHERISH_MAINTAINER := suhezxo
+#CHERISH_VANILLA := true
+#TARGET_USES_PICO_GAPPS := true
+TARGET_USES_MINI_GAPPS := true
+#USE_PIXEL_CHARGING := true
+#TARGET_INCLUDE_CARRIER_SETTINGS := true
+$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := cherish_noblelte
